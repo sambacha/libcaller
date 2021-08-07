@@ -2,7 +2,7 @@
   "name": "libcaller",
   "private": false,
   "version": "1.0.0-0",
-  "main": "src/index.js",
+  "main": "src/dist/index.js",
   "description": "",
   "files": [
     "/contracts/**/*.sol",
