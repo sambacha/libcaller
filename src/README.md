@@ -2,16 +2,27 @@
 
 > [documentation](https://libcaller.netlify.app)
 
-libcaller is a lightweight library for interacting with the [multicall](https://github.com/makerdao/multicall/blob/master/src/Multicall.sol) smart contract.
+libcaller is a lightweight library for interacting with the
+[multicall](https://github.com/makerdao/multicall/blob/master/src/Multicall.sol)
+smart contract.
 
-Multicall allows multiple smart contract constant function calls to be grouped into a single call and the results aggregated into a single result. This reduces the number of separate JSON RPC requests that need to be sent over the network if using a remote node like Infura, and provides the guarantee that all values returned are from the same block. The latest block number is also returned along with the aggregated results.
+Multicall allows multiple smart contract constant function calls to be grouped
+into a single call and the results aggregated into a single result. This reduces
+the number of separate JSON RPC requests that need to be sent over the network
+if using a remote node like Infura, and provides the guarantee that all values
+returned are from the same block. The latest block number is also returned along
+with the aggregated results.
 
-libcaller is fully written in typescript so has full compile time support. The motivation of this package was to expose a super simple and easy to understand interface for you to take the full benefits of the multicalls. Also to not being opinionated on how you use it, you can use it with web3, ethers or even pass in a custom nodeUrl and we do it for you. This package takes care of the decoding for you but at the same time if you dont want it to you can turn that part off.
+libcaller is fully written in typescript so has full compile time support. The
+motivation of this package was to expose a super simple and easy to understand
+interface for you to take the full benefits of the multicalls. Also to not being
+opinionated on how you use it, you can use it with web3, ethers or even pass in
+a custom nodeUrl and we do it for you. This package takes care of the decoding
+for you but at the same time if you dont want it to you can turn that part off.
 
 ## Overview
 
 ![](docs/libcaller.svg)
-
 
 ## Installation
 
@@ -46,11 +57,7 @@ const ethereumMulticall = require('libcaller');
 ### JavaScript (ES6) / TypeScript
 
 ```js
-import {
-  Multicall,
-  ContractCallResults,
-  ContractCallContext,
-} from 'libcaller';
+import { Multicall, ContractCallResults, ContractCallContext } from 'libcaller';
 ```
 
 ### ethers usage example
@@ -265,14 +272,16 @@ console.log(results);
 
 ### Multicall contracts
 
-by default it looks at your network from the provider you passed in and makes the contract address to that:
+by default it looks at your network from the provider you passed in and makes
+the contract address to that:
 
 - mainnet > '0xeefba1e63905ef1d7acba5a8513c70307c1ce441'
 - kovan > '0x2cc8688c5f75e365aaeeb4ea8d6a480405a48d2a'
 - rinkeby > '0x42ad527de7d4e9d9d011ac45b31d8551f8fe9821'
 - ropsten > '0x53c43764255c17bd724f74c4ef150724ac50a3ed'
 
-If you wanted this to point at a different multicall contract address just pass that in the options when creating the multicall instance, example:
+If you wanted this to point at a different multicall contract address just pass
+that in the options when creating the multicall instance, example:
 
 ```ts
 const multicall = new Multicall({

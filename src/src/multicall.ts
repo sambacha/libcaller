@@ -281,11 +281,12 @@ export class Multicall {
   private async executeWithEthersOrCustom(
     calls: AggregateCallContext[],
   ): Promise<AggregateResponse> {
-    let ethersProvider = this.getTypedOptions<MulticallOptionsEthers>()
-      .ethersProvider;
+    let ethersProvider =
+      this.getTypedOptions<MulticallOptionsEthers>().ethersProvider;
 
     if (!ethersProvider) {
-      const customProvider = this.getTypedOptions<MulticallOptionsCustomJsonRpcProvider>();
+      const customProvider =
+        this.getTypedOptions<MulticallOptionsCustomJsonRpcProvider>();
       if (customProvider.nodeUrl) {
         ethersProvider = new ethers.providers.JsonRpcProvider(
           customProvider.nodeUrl,
@@ -372,7 +373,7 @@ export class Multicall {
    * Get typed options
    */
   private getTypedOptions<T>(): T {
-    return (this._options as unknown) as T;
+    return this._options as unknown as T;
   }
 
   /**
