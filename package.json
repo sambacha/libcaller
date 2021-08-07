@@ -1,7 +1,8 @@
 {
-  "name": "solidity-hardhat-template",
-  "private": true,
+  "name": "libcaller",
+  "private": false,
   "version": "0.0.0",
+  "main": "src/index.js",
   "description": "",
   "files": [
     "/contracts/**/*.sol",
@@ -14,14 +15,14 @@
     "coverage": "npx hardhat coverage",
     "test": "npx hardhat test",
     "lint": "npx gts lint",
-    "format": "npx prettier --config prettier.config.js --write .",
+    "format": "npx prettier --config .prettierrc.js --write .",
     "clean": "npx gts clean",
     "fix": "npx gts fix",
     "prepare": "npx tsdx build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sambacha/solidity-hardhat-template.git"
+    "url": "git+https://github.com/sambacha/libcaller.git"
   },
   "keywords": [
     "solidity",
@@ -32,9 +33,8 @@
   "author": "SEE CONTRIBUTORS",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/sambacha/solidity-hardhat-template/issues"
+    "url": "https://github.com/sambacha/libcaller/issues"
   },
-  "homepage": "https://github.com/sambacha/solidity-hardhat-template#readme",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@tenderly/hardhat-tenderly": "1.0.12",

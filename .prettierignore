@@ -1,0 +1,13 @@
+*.html
+*.css
+*.scss
+*.svg
+*.min.js
+*.log
+cache/
+.cache
+build/
+dist/
+*.xml
+*.xhtml
+
